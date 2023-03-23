@@ -3,14 +3,14 @@ import 'package:bmi_app/Calculator/result_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class BmiPage extends StatefulWidget {
-  const BmiPage({Key? key}) : super(key: key);
+class InbodyPage extends StatefulWidget {
+  const InbodyPage({Key? key}) : super(key: key);
 
   @override
-  _BmiPageState createState() => _BmiPageState();
+  _InbodyPageState createState() => _InbodyPageState();
 }
 
-class _BmiPageState extends State<BmiPage>
+class _InbodyPageState extends State<InbodyPage>
 {
   bool isMale = true;
   double height = 155.0;
@@ -25,9 +25,9 @@ class _BmiPageState extends State<BmiPage>
         centerTitle: true,
         backgroundColor: Colors.purple,
         title: Text(
-          'BMI Calculator',
+          'Inbody Calculator',
           style: TextStyle(
-            fontSize: 35.0,
+            fontSize: 30.0,
           ),
         ),
       ),
@@ -406,16 +406,41 @@ class _BmiPageState extends State<BmiPage>
           ),
           Container(
             width: 300,
-            color: Colors.purple,
+            decoration: BoxDecoration(
+              color: Colors.purple,
+              borderRadius: BorderRadius.circular(40)
+            ),
             child: MaterialButton(
               onPressed: ()
               {
-                double result = weight / ((height / 100) * (height / 100));
-                print(result.toStringAsFixed(1));
+                double Protein = 0;
+                double BMI = weight / ((height / 100) * (height / 100));
+                print(BMI.toStringAsFixed(1));
+                double muscleMass=0,bodyFat=0,totalWater=0,protein=1.5,idealWeight=0;
+                //protin you need (n9)
+                Protein = (weight*protein);
+                DateTime now = DateTime.now();
+                if(isMale){
+                  muscleMass = (0.407 * weight) + (0.267 * height) - 19.2;
+                  bodyFat = (1.2*BMI)+(0.23*age)-16.2;
+                  totalWater = 2.447 - (0.09145*age) + (0.1074*height) + (0.3362*weight);
+                  idealWeight = 50 + (0.91*height) - 152.4;
+                }
+                else{
+                  muscleMass = (0.252 * weight) + (0.473 * height) - 48.3;
+                  bodyFat = (1.2*BMI)+(0.23*age)-5.4;
+                  totalWater = -2.097 + (0.1069*height) + (0.2466*weight);
+                  idealWeight = 45.5 + (0.91*height) - 152.4;
+                }
                 Get.to(ResultPage(
                   age: age,
                   isMale: isMale,
-                  result: result,
+                  result: BMI,
+                  Protein: Protein,
+                  bodyFat: bodyFat,
+                  idealWeight: idealWeight,
+                  muscleMass: muscleMass,
+                  totalWater: totalWater,
                 ));
               },
               height: 60.0,

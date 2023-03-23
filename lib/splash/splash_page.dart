@@ -1,5 +1,5 @@
 import 'package:animate_do/animate_do.dart';
-import 'package:bmi_app/Home/bmi_page.dart';
+import 'package:bmi_app/Home/inbody_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -14,7 +14,7 @@ class _SplashPageState extends State<SplashPage> {
   void initState() {
     // TODO: implement initState
     Future.delayed(Duration(seconds: 4),(){
-      Get.off(BmiPage());
+      Get.off(InbodyPage());
     });
   }
   @override

@@ -4,13 +4,24 @@ import 'package:flutter/material.dart';
 class ResultPage extends StatelessWidget {
 
   final double result;
+  final double Protein;
+  final double muscleMass;
+  final double totalWater;
+  final double bodyFat;
+  final double idealWeight;
   final bool isMale;
   final int age;
+
 
   ResultPage({
     required this.result,
     required this.age,
     required this.isMale,
+    required this.muscleMass,
+    required this.bodyFat,
+    required this.totalWater,
+    required this.idealWeight,
+    required this.Protein,
   });
 
   @override
@@ -20,16 +31,16 @@ class ResultPage extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         backgroundColor: Colors.purple,
-        title: Text('BMI Result',
+        title: Text('Inbody Result',
           style: TextStyle(
-            fontSize: 35.0,
+            fontSize: 30.0,
             fontWeight: FontWeight.bold,
           ),
         ),
       ),
       body: Center(
         child: Container(
-          height: 320,
+          height: 480,
           width: 320,
           decoration: BoxDecoration(
             color: Colors.purple,
@@ -50,7 +61,7 @@ class ResultPage extends StatelessWidget {
               Text('Gender : ${isMale ? 'Male' : 'Female'}',
                 style:  TextStyle(
                   color: Colors.white,
-                  fontSize: 35.0,
+                  fontSize: 25.0,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -58,7 +69,7 @@ class ResultPage extends StatelessWidget {
               Text('Age : $age',
                 style:  TextStyle(
                   color: Colors.white,
-                  fontSize: 35.0,
+                  fontSize: 25.0,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -66,7 +77,47 @@ class ResultPage extends StatelessWidget {
               Text('BMI : ${result.toStringAsFixed(1)}',
                 style:  TextStyle(
                   color: Colors.white,
-                  fontSize: 35.0,
+                  fontSize: 25.0,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              SizedBox(height: 20,),
+              Text('MuscleMass : ${muscleMass.toStringAsFixed(1)}',
+                style:  TextStyle(
+                  color: Colors.white,
+                  fontSize: 25.0,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              SizedBox(height: 20,),
+              Text('BodyFat : ${bodyFat.toStringAsFixed(1)}',
+                style:  TextStyle(
+                  color: Colors.white,
+                  fontSize: 25.0,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              SizedBox(height: 20,),
+              Text('TotalWater : ${totalWater.toStringAsFixed(1)}',
+                style:  TextStyle(
+                  color: Colors.white,
+                  fontSize: 25.0,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              SizedBox(height: 20,),
+              Text('Protein : ${Protein.toStringAsFixed(1)}',
+                style:  TextStyle(
+                  color: Colors.white,
+                  fontSize: 25.0,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              SizedBox(height: 20,),
+              Text('IdealWeight : ${idealWeight.toStringAsFixed(1)}',
+                style:  TextStyle(
+                  color: Colors.white,
+                  fontSize: 25.0,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -86,10 +137,10 @@ class ResultPage extends StatelessWidget {
                     ]
                 ),
                 child: Center(
-                  child: Text('Normal : 18.5 - 24.9',
+                  child: Text('Normal BMI : 18.5 - 24.9',
                     style:  TextStyle(
                       color: Colors.green,
-                      fontSize: 30.0,
+                      fontSize: 25.0,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
