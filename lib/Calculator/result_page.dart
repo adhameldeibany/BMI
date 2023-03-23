@@ -29,8 +29,8 @@ class ResultPage extends StatelessWidget {
       ),
       body: Center(
         child: Container(
-          height: 200,
-          width: 300,
+          height: 320,
+          width: 320,
           decoration: BoxDecoration(
             color: Colors.purple,
             borderRadius: BorderRadius.circular(30),
@@ -50,7 +50,7 @@ class ResultPage extends StatelessWidget {
               Text('Gender : ${isMale ? 'Male' : 'Female'}',
                 style:  TextStyle(
                   color: Colors.white,
-                  fontSize: 40.0,
+                  fontSize: 35.0,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -58,7 +58,7 @@ class ResultPage extends StatelessWidget {
               Text('Age : $age',
                 style:  TextStyle(
                   color: Colors.white,
-                  fontSize: 40.0,
+                  fontSize: 35.0,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -66,8 +66,33 @@ class ResultPage extends StatelessWidget {
               Text('BMI : ${result.toStringAsFixed(1)}',
                 style:  TextStyle(
                   color: Colors.white,
-                  fontSize: 40.0,
+                  fontSize: 35.0,
                   fontWeight: FontWeight.bold,
+                ),
+              ),
+              SizedBox(height: 20,),
+              Container(
+                width: 300,
+                height: 40,
+                decoration: BoxDecoration(
+                    color: Color(0xff090f20),
+                    borderRadius: BorderRadius.circular(40.0),
+                    boxShadow: [
+                      BoxShadow(
+                        blurRadius: 8,
+                        color: Colors.black,
+                        offset: Offset(0, 5),
+                      )
+                    ]
+                ),
+                child: Center(
+                  child: Text('Normal : 18.5 - 24.9',
+                    style:  TextStyle(
+                      color: Colors.green,
+                      fontSize: 30.0,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
                 ),
               ),
             ],

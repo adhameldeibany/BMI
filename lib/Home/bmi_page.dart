@@ -146,7 +146,7 @@ class _BmiPageState extends State<BmiPage>
                       'Height',
                       style: TextStyle(
                         color: Colors.white,
-                        fontSize: 40,
+                        fontSize: 35,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -160,7 +160,7 @@ class _BmiPageState extends State<BmiPage>
                           '${height.round()}',
                           style: TextStyle(
                             color: Colors.white,
-                            fontSize: 35.0,
+                            fontSize: 30.0,
                           ),
                         ),
                         SizedBox(
@@ -259,7 +259,7 @@ class _BmiPageState extends State<BmiPage>
                               'Age',
                               style: TextStyle(
                                 color: Colors.white,
-                                fontSize: 35.0,
+                                fontSize: 30,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
@@ -268,7 +268,7 @@ class _BmiPageState extends State<BmiPage>
                             '$age',
                             style: TextStyle(
                               color: Colors.white,
-                              fontSize: 30.0,
+                              fontSize: 28,
                             ),
                           ),
                           SizedBox(height: 12,),
@@ -337,7 +337,7 @@ class _BmiPageState extends State<BmiPage>
                               'Weight',
                               style: TextStyle(
                                 color: Colors.white,
-                                fontSize: 33.0,
+                                fontSize: 30.0,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
@@ -346,7 +346,7 @@ class _BmiPageState extends State<BmiPage>
                             '${weight.round()}',
                             style: TextStyle(
                               color: Colors.white,
-                              fontSize: 30.0,
+                              fontSize: 28.0,
                             ),
                           ),
                           SizedBox(height: 12,),
@@ -405,7 +405,7 @@ class _BmiPageState extends State<BmiPage>
             ),
           ),
           Container(
-            width: double.infinity,
+            width: 300,
             color: Colors.purple,
             child: MaterialButton(
               onPressed: ()
@@ -430,6 +430,7 @@ class _BmiPageState extends State<BmiPage>
 
             ),
           ),
+          SizedBox(height: 8,),
         ],
       ),
     );
