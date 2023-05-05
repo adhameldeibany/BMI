@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ResultPage extends StatelessWidget {
 
@@ -33,15 +34,15 @@ class ResultPage extends StatelessWidget {
         backgroundColor: Colors.purple,
         title: Text('Inbody Result',
           style: TextStyle(
-            fontSize: 30.0,
+            fontSize: 30.sp,
             fontWeight: FontWeight.bold,
           ),
         ),
       ),
       body: Center(
         child: Container(
-          height: 480,
-          width: 320,
+          height: 600.h,
+          width: 320.w,
           decoration: BoxDecoration(
             color: Colors.purple,
             borderRadius: BorderRadius.circular(30),
@@ -61,70 +62,70 @@ class ResultPage extends StatelessWidget {
               Text('Gender : ${isMale ? 'Male' : 'Female'}',
                 style:  TextStyle(
                   color: Colors.white,
-                  fontSize: 25.0,
+                  fontSize: 25.sp,
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              SizedBox(height: 20,),
+              SizedBox(height: 20.h,),
               Text('Age : $age',
                 style:  TextStyle(
                   color: Colors.white,
-                  fontSize: 25.0,
+                  fontSize: 25.sp,
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              SizedBox(height: 20,),
+              SizedBox(height: 20.h,),
               Text('BMI : ${result.toStringAsFixed(1)}',
                 style:  TextStyle(
                   color: Colors.white,
-                  fontSize: 25.0,
+                  fontSize: 25.sp,
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              SizedBox(height: 20,),
+              SizedBox(height: 20.h,),
               Text('MuscleMass : ${muscleMass.toStringAsFixed(1)}',
                 style:  TextStyle(
                   color: Colors.white,
-                  fontSize: 25.0,
+                  fontSize: 25.sp,
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              SizedBox(height: 20,),
+              SizedBox(height: 20.h,),
               Text('BodyFat : ${bodyFat.toStringAsFixed(1)}',
                 style:  TextStyle(
                   color: Colors.white,
-                  fontSize: 25.0,
+                  fontSize: 25.sp,
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              SizedBox(height: 20,),
+              SizedBox(height: 20.h,),
               Text('TotalWater : ${totalWater.toStringAsFixed(1)}',
                 style:  TextStyle(
                   color: Colors.white,
-                  fontSize: 25.0,
+                  fontSize: 25.sp,
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              SizedBox(height: 20,),
+              SizedBox(height: 20.h,),
               Text('Protein : ${Protein.toStringAsFixed(1)}',
                 style:  TextStyle(
                   color: Colors.white,
-                  fontSize: 25.0,
+                  fontSize: 25.sp,
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              SizedBox(height: 20,),
-              Text('IdealWeight : ${idealWeight.toStringAsFixed(1)}',
+              SizedBox(height: 20.h,),
+              Text('Ideal Weight : ${idealWeight.toStringAsFixed(1)}',
                 style:  TextStyle(
                   color: Colors.white,
-                  fontSize: 25.0,
+                  fontSize: 25.sp,
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              SizedBox(height: 20,),
+              SizedBox(height: 20.h,),
               Container(
-                width: 300,
-                height: 40,
+                width: 300.w,
+                height: 40.h,
                 decoration: BoxDecoration(
                     color: Color(0xff090f20),
                     borderRadius: BorderRadius.circular(40.0),
@@ -140,7 +141,7 @@ class ResultPage extends StatelessWidget {
                   child: Text('Normal BMI : 18.5 - 24.9',
                     style:  TextStyle(
                       color: Colors.green,
-                      fontSize: 25.0,
+                      fontSize: 20.sp,
                       fontWeight: FontWeight.bold,
                     ),
                   ),

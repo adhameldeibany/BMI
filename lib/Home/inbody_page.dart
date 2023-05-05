@@ -1,6 +1,7 @@
 import 'dart:math';
 import 'package:bmi_app/Calculator/result_page.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
 class InbodyPage extends StatefulWidget {
@@ -27,7 +28,7 @@ class _InbodyPageState extends State<InbodyPage>
         title: Text(
           'Inbody Calculator',
           style: TextStyle(
-            fontSize: 30.0,
+            fontSize: 30.sp,
           ),
         ),
       ),
@@ -52,17 +53,17 @@ class _InbodyPageState extends State<InbodyPage>
                           children: [
                             Image(
                               image: AssetImage('assets/male.png'),
-                              height: 100.0,
-                              width: 100.0,
+                              height: 80.h,
+                              width: 80.w,
                             ),
                             SizedBox(
-                              height: 15.0,
+                              height: 8.h,
                             ),
                             Text(
                               'Male',
                               style: TextStyle(
                                 color: Colors.white,
-                                fontSize: 30.0,
+                                fontSize: 30.sp,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
@@ -83,7 +84,7 @@ class _InbodyPageState extends State<InbodyPage>
                     ),
                   ),
                   SizedBox(
-                    width: 20.0,
+                    width: 20.w,
                   ),
                   Expanded(
                     child: GestureDetector(
@@ -99,17 +100,17 @@ class _InbodyPageState extends State<InbodyPage>
                           children: [
                             Image(
                               image: AssetImage('assets/female.png'),
-                              height: 100.0,
-                              width: 100.0,
+                              height: 80.h,
+                              width: 80.w,
                             ),
                             SizedBox(
-                              height: 15.0,
+                              height: 8.h,
                             ),
                             Text(
                               'Female',
                               style: TextStyle(
                                 color: Colors.white,
-                                fontSize: 30.0,
+                                fontSize: 30.sp,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
@@ -146,11 +147,11 @@ class _InbodyPageState extends State<InbodyPage>
                       'Height',
                       style: TextStyle(
                         color: Colors.white,
-                        fontSize: 35,
+                        fontSize: 35.sp,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    SizedBox(height: 8,),
+                    SizedBox(height: 4.h,),
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.baseline,
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -160,17 +161,17 @@ class _InbodyPageState extends State<InbodyPage>
                           '${height.round()}',
                           style: TextStyle(
                             color: Colors.white,
-                            fontSize: 30.0,
+                            fontSize: 30.sp,
                           ),
                         ),
                         SizedBox(
-                          width: 5.0,
+                          width: 5.w,
                         ),
                         Text(
                           'CM',
                           style: TextStyle(
                             color: Colors.white,
-                            fontSize: 20.0,
+                            fontSize: 20.sp,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
@@ -188,7 +189,7 @@ class _InbodyPageState extends State<InbodyPage>
                         });
                       },
                     ),
-                    SizedBox(height: 4,),
+                    SizedBox(height: 0.h,),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children:
@@ -207,7 +208,7 @@ class _InbodyPageState extends State<InbodyPage>
                           backgroundColor: Colors.purple,
                         ),
                         SizedBox(
-                          width: 170,
+                          width: 170.w,
                         ),
                         FloatingActionButton(
                           onPressed: ()
@@ -224,7 +225,7 @@ class _InbodyPageState extends State<InbodyPage>
                         ),
                       ],
                     ),
-                    SizedBox(height: 8,),
+                    SizedBox(height: 0.h,),
                   ],
                 ),
                 decoration: BoxDecoration(
@@ -259,7 +260,7 @@ class _InbodyPageState extends State<InbodyPage>
                               'Age',
                               style: TextStyle(
                                 color: Colors.white,
-                                fontSize: 30,
+                                fontSize: 30.sp,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
@@ -268,10 +269,10 @@ class _InbodyPageState extends State<InbodyPage>
                             '$age',
                             style: TextStyle(
                               color: Colors.white,
-                              fontSize: 28,
+                              fontSize: 28.sp,
                             ),
                           ),
-                          SizedBox(height: 12,),
+                          SizedBox(height: 8.h,),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children:
@@ -290,7 +291,7 @@ class _InbodyPageState extends State<InbodyPage>
                                 backgroundColor: Colors.purple,
                               ),
                               SizedBox(
-                                width: 40,
+                                width: 40.w,
                               ),
                               FloatingActionButton(
                                 onPressed: ()
@@ -323,7 +324,7 @@ class _InbodyPageState extends State<InbodyPage>
                     ),
                   ),
                   SizedBox(
-                    width: 20.0,
+                    width: 20.w,
                   ),
                   Expanded(
                     child: Container(
@@ -337,7 +338,7 @@ class _InbodyPageState extends State<InbodyPage>
                               'Weight',
                               style: TextStyle(
                                 color: Colors.white,
-                                fontSize: 30.0,
+                                fontSize: 30.sp,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
@@ -346,10 +347,10 @@ class _InbodyPageState extends State<InbodyPage>
                             '${weight.round()}',
                             style: TextStyle(
                               color: Colors.white,
-                              fontSize: 28.0,
+                              fontSize: 28.sp,
                             ),
                           ),
-                          SizedBox(height: 12,),
+                          SizedBox(height: 8.h,),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children:
@@ -368,7 +369,7 @@ class _InbodyPageState extends State<InbodyPage>
                                 backgroundColor: Colors.purple,
                               ),
                               SizedBox(
-                                width: 40,
+                                width: 40.w,
                               ),
                               FloatingActionButton(
                                 onPressed: ()
@@ -405,7 +406,7 @@ class _InbodyPageState extends State<InbodyPage>
             ),
           ),
           Container(
-            width: 300,
+            width: 300.w,
             decoration: BoxDecoration(
               color: Colors.purple,
               borderRadius: BorderRadius.circular(40)
@@ -413,12 +414,12 @@ class _InbodyPageState extends State<InbodyPage>
             child: MaterialButton(
               onPressed: ()
               {
-                double Protein = 0;
                 double BMI = weight / ((height / 100) * (height / 100));
                 print(BMI.toStringAsFixed(1));
-                double muscleMass=0,bodyFat=0,totalWater=0,protein=1.5,idealWeight=0;
+                double muscleMass=0,bodyFat=0,totalWater=0,Protein=1.5,idealWeight=0;
                 //protin you need (n9)
-                Protein = (weight*protein);
+                Protein = (weight*Protein);
+                //protienYouNeed = (weight * 2.75) / 1000;
                 DateTime now = DateTime.now();
                 if(isMale){
                   muscleMass = (0.407 * weight) + (0.267 * height) - 19.2;
@@ -455,7 +456,7 @@ class _InbodyPageState extends State<InbodyPage>
 
             ),
           ),
-          SizedBox(height: 8,),
+          SizedBox(height: 8.h,),
         ],
       ),
     );
